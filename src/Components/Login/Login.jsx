@@ -1,12 +1,35 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import img from "../../assets/image/signup.png";
 import img2 from "../../assets/image/icon.png";
 import Social from '../../Shared/Social/Social';
 import { FaEyeSlash } from "react-icons/fa";
 import { IoEyeSharp } from "react-icons/io5";
+import { useForm } from "react-hook-form"
+import { AuthContext } from '../../Authentication/AuthProvider/AuthProvider';
+import toast from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
     const [isShow,setShow]=useState(false)
+    const {loginUser}=useContext(AuthContext)
+    const navigate = useNavigate()
+
+    const {
+      register,
+      handleSubmit,
+      formState: { errors },
+      reset
+    } = useForm()
+
+    const onSubmit = (data) => {
+      loginUser(data?.email, data?.password)
+      .then(res=>{
+        console.log(res.user)
+        toast.success('user login successfully')
+        reset()
+        navigate('/')
+      })
+    }
 
     return (
         <div className="flex items-center">
@@ -21,7 +44,7 @@ const Login = () => {
             </div>
   
             {/* form */}
-            <form action="#" className="space-y-6">
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
               
               {/* email */}
               <div className="space-y-2 text-sm">
@@ -30,9 +53,11 @@ const Login = () => {
                   id="email"
                   placeholder="Enter email"
                   name="email"
+                  {...register("email", { required: true })}
                   type="email"
                   required
                 />
+                {errors.email && <span className="text-red-500 text-left">This field is required</span>}
                 
               </div>
 
@@ -43,10 +68,14 @@ const Login = () => {
                   id="password"
                   placeholder="Enter password"
                   name="password"
+                  {...register("password", { required: true })}
                   type={isShow ? "text" : "password"}
                   required
                 />
                 <p onClick={()=>setShow(!isShow)} className="absolute right-2 top-1 cursor-pointer">{isShow ? <IoEyeSharp /> : <FaEyeSlash />} </p>
+
+                {errors.email && <span className="text-red-500 text-left">This field is required</span>}
+
                 <div className="flex justify-end text-xs">
                   <a
                     href="#"

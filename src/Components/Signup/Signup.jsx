@@ -1,13 +1,42 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import img from "../../assets/image/signup.png";
 import img2 from "../../assets/image/icon.png";
 import { FaEyeSlash } from "react-icons/fa";
 import { IoEyeSharp } from "react-icons/io5";
 import Social from "../../Shared/Social/Social";
-
+import { useForm } from "react-hook-form"
+import { AuthContext } from "../../Authentication/AuthProvider/AuthProvider";
+import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
   const [isShow,setShow] = useState(true)
+  const {createUser}=useContext(AuthContext)
+  const navigate = useNavigate()
+  
+  
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset
+  } = useForm()
+
+  const onSubmit = (data) => {
+    console.log(data)
+    createUser(data?.email,data?.password)
+    .then(res=>{
+      console.log(res.user)
+      toast.success('user Created Successfully')
+      reset()
+      navigate('/')
+    })
+    
+
+  }
+
+  
+
   return (
     <div className="flex items-center">
       {/* sign up form  */}
@@ -22,7 +51,7 @@ const Signup = () => {
           </div>
 
           {/* form */}
-          <form action="#" className="space-y-6">
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
             <div className="flex items-center gap-x-5">
               <div className="space-y-2 text-sm w-1/2">
                 <input
@@ -30,18 +59,20 @@ const Signup = () => {
                   id="username"
                   placeholder="first name"
                   name="firstName"
+                  {...register("firstName", { required: true })}
                   type="text"
                   required
                 />
+                {errors.firstName && <span className="text-red-500">This field is required</span>}
               </div>
               <div className="space-y-2 text-sm w-1/2">
                 <input
                   className="flex h-10 w-full rounded-md border px-3 py-2 text-sm focus:ring-1 focus-visible:outline-none dark:border-zinc-700"
                   id="username"
-                  placeholder="Last Name"
-                  name="lastname"
+                  placeholder="Last Name (optional)"
+                  name="lastName"
                   type="text"
-                  required
+                  {...register("lastName")}
                 />
               </div>
             </div>
@@ -51,9 +82,11 @@ const Signup = () => {
                 id="email"
                 placeholder="Enter email"
                 name="email"
+                {...register("email", { required: true })}
                 type="email"
                 required
               />
+              {errors.email && <span className="text-red-500">This field is required</span>}
               
             </div>
             <div className="space-y-2 text-sm relative">
@@ -62,9 +95,12 @@ const Signup = () => {
                 id="password"
                 placeholder="Enter password"
                 name="password"
+                {...register("password", { required: true })}
                 type={isShow ? "text" : "password"}
                 required
               />
+              {errors.password && <span className="text-red-500">This field is required</span>}
+
               <p onClick={()=>setShow(!isShow)} className="absolute right-2 top-1 cursor-pointer">{isShow ? <IoEyeSharp /> : <FaEyeSlash />} </p>
               <div className="flex justify-end text-xs">
                 <a
