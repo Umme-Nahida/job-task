@@ -9,6 +9,7 @@ import Categories from "../Pages/Categories/Categories";
 import Custom from "../Pages/Custom/Custom";
 import Blog from "../Pages/Blog/Blog";
 import Signup from "../Components/Signup/Signup";
+import Login from "../Components/Login/Login";
 
 const router = createBrowserRouter([
     {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
     {
       path:'/signup',
       element:<Signup></Signup>
+    },
+    {
+      path:'/login',
+      element:<Login></Login>
     }
   ]);
 
