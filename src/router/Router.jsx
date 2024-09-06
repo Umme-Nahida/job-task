@@ -8,6 +8,7 @@ import Product from "../Pages/Product/Product";
 import Categories from "../Pages/Categories/Categories";
 import Custom from "../Pages/Custom/Custom";
 import Blog from "../Pages/Blog/Blog";
+import Signup from "../Components/Signup/Signup";
 
 const router = createBrowserRouter([
     {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
         },
       ]
     },
+    {
+      path:'/signup',
+      element:<Signup></Signup>
+    }
   ]);
 
 export default router;

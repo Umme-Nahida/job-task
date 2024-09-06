@@ -1,37 +1,56 @@
 import React from "react";
-
+import img from "../../assets/image/signup.png";
+import img2 from "../../assets/image/icon.png";
 const Signup = () => {
   return (
-    <div>
+    <div className="flex items-center">
       {/* sign up form  */}
       <div className="md:w-1/2">
-        <div className="mx-auto w-full max-w-md space-y-4 rounded-lg border bg-white p-7 shadow-lg sm:p-10 dark:border-zinc-700 dark:bg-zinc-900">
-          <h1 className="text-3xl font-semibold tracking-tight">Sign In</h1>
+        <div className="mx-auto w-full text-center max-w-md space-y-4 rounded-lg border bg-white p-7 shadow-lg sm:p-10 dark:border-zinc-700 dark:bg-zinc-900">
+          <div className=" space-y-2">
+            <h5>Welcome To</h5>
+            <h1 className="text-4xl font-bold text-black">
+              Furni<span className="text-[#1E99F5]">Flex</span>
+            </h1>
+            <p>Signup for purchase your desire products</p>
+          </div>
 
+          {/* form */}
           <form action="#" className="space-y-6">
-            <div className="space-y-2 text-sm">
-              <label
-                htmlFor="username"
-                className="block text-zinc-700 dark:text-zinc-300 font-medium"
-              >
-                Username
-              </label>
-              <input
-                className="flex h-10 w-full rounded-md border px-3 py-2 text-sm focus:ring-1 focus-visible:outline-none dark:border-zinc-700"
-                id="username"
-                placeholder="Enter username"
-                name="username"
-                type="text"
-                required
-              />
+            <div className="flex items-center gap-x-5">
+              <div className="space-y-2 text-sm w-1/2">
+                <input
+                  className="flex h-10 w-full rounded-md border px-3 py-2 text-sm focus:ring-1 focus-visible:outline-none dark:border-zinc-700"
+                  id="username"
+                  placeholder="first name"
+                  name="firstName"
+                  type="text"
+                  required
+                />
+              </div>
+              <div className="space-y-2 text-sm w-1/2">
+                <input
+                  className="flex h-10 w-full rounded-md border px-3 py-2 text-sm focus:ring-1 focus-visible:outline-none dark:border-zinc-700"
+                  id="username"
+                  placeholder="Last Name"
+                  name="lastname"
+                  type="text"
+                  required
+                />
+              </div>
             </div>
             <div className="space-y-2 text-sm">
-              <label
-                htmlFor="password"
-                className="block text-zinc-700 dark:text-zinc-300 font-medium"
-              >
-                Password
-              </label>
+              <input
+                className="flex h-10 w-full rounded-md border px-3 py-2 text-sm focus:ring-1 focus-visible:outline-none dark:border-zinc-700"
+                id="email"
+                placeholder="Enter email"
+                name="email"
+                type="email"
+                required
+              />
+              
+            </div>
+            <div className="space-y-2 text-sm">
               <input
                 className="flex h-10 w-full rounded-md border px-3 py-2 text-sm focus:ring-1 focus-visible:outline-none dark:border-zinc-700"
                 id="password"
@@ -61,9 +80,25 @@ const Signup = () => {
           </p>
         </div>
       </div>
-      {/* sign up img */}
-      <div className="w-1/2">
-      <img src="" alt="" />
+
+      {/* sign up bg-image */}
+      <div className="w-1/2 h-screen pl-10 ">
+        <div
+          className=" h-full bg-cover flex items-center justify-center"
+          style={{ backgroundImage: `url(${img})` }}
+        >
+          <div className="text-center space-y-3 px-5 md:px-10 ">
+            <img src={img2} className=" mx-auto" alt="" />
+            <h1 className="text-4xl font-bold text-white">
+              Furni<span className="text-[#1E99F5]">Flex</span>
+            </h1>
+            <p className="text-slate-300">
+              Discover a seamless shopping experience with our curated
+              collection of products. From fashion to electronics, we bring
+              quality.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
