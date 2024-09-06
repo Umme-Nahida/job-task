@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/image/Logo.png";
 import Container from "../Container/Container";
 import { FaCartPlus } from "react-icons/fa6";
+import { AuthContext } from "../../Authentication/AuthProvider/AuthProvider";
+import toast from "react-hot-toast";
 
 
 const Navbar = () => {
+  const {user,logOut}=useContext(AuthContext)
+  const [isActive,setActive]=useState(false)
+
+  const handleLogOut=()=>{
+    logOut()
+    toast.success('user logOut successfully')
+  }
+
   const menu = (
     <>
       <li>
@@ -63,13 +73,15 @@ const Navbar = () => {
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">{menu}</ul>
           </div>
+
           {/* img and cart */}
           <div className="navbar-end">
             <div className="indicator mr-5">
               <span className="indicator-item badge badge-secondary">99+</span>
               <button className="text-4xl"><FaCartPlus /></button>
             </div>
-            <div className="dropdown dropdown-end">
+
+            <div onClick={()=>setActive(!isActive)} className="dropdown dropdown-end">
               <div
                 tabIndex={0}
                 role="button"
@@ -82,11 +94,26 @@ const Navbar = () => {
                   />
                 </div>
               </div>
-              <ul
+              {
+                isActive && <ul
                 tabIndex={0}
                 className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
               >
+               {
+                user ? <>
+                  <li>
+                  <a href="/login" className="justify-between">
+                    Login
+                  </a>
+                </li>
                 <li>
+                  <button onClick={handleLogOut}>LogOut </button>
+                </li>
+               
+                </>
+                : 
+                <>
+                   <li>
                   <a href="/login" className="justify-between">
                     Login
                   </a>
@@ -94,7 +121,10 @@ const Navbar = () => {
                 <li>
                   <a href="/signup">Sign Up</a>
                 </li>
+                </>
+               }
               </ul>
+              }
             </div>
           </div>
         </div>
