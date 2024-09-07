@@ -5,9 +5,11 @@ import Container from "../Container/Container";
 import { FaCartPlus } from "react-icons/fa6";
 import { AuthContext } from "../../Authentication/AuthProvider/AuthProvider";
 import toast from "react-hot-toast";
+import { productContext } from "../../ProductProvider/ProductProvider";
 
 
 const Navbar = () => {
+  const {cart}=useContext(productContext)
   const {user,logOut}=useContext(AuthContext)
   const [isActive,setActive]=useState(false)
 
@@ -77,7 +79,7 @@ const Navbar = () => {
           {/* img and cart */}
           <div className="navbar-end">
             <div className="indicator mr-5">
-              <span className="indicator-item badge badge-secondary">99+</span>
+              <span className="indicator-item badge badge-secondary">{cart?.length}+ </span>
               <button className="text-4xl"><FaCartPlus /></button>
             </div>
 
