@@ -38,9 +38,9 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="w-full">
+    <div className="w-full fixed z-[999] mx-auto">
       <Container>
-        <div className="navbar bg-white shadow-sm">
+        <div className="navbar  bg-white shadow-sm">
           <div className="navbar-start">
             <div className="dropdown">
               <div

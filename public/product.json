@@ -1,0 +1,221 @@
+   [
+    {
+      "category": "Rocking chair",
+      "data":[
+        { 
+          "id": 1,
+          "category": "Rocking chair",
+          "title": "Classic Wooden Rocking-chair",
+          "image": "/src/assets/image/image-1.png",
+          "price": 150.00,
+          "discount": 20.00,
+          "final_price": 130.00,
+          "amount_to_pay": 130.00,
+          "description": "A traditional wooden Rocking-chair for a relaxing experience."
+        },
+        {
+          "id": 2,
+          "category": "Rocking chair",
+          "title": "Modern Upholstered Rocking-chair",
+          "image": "/src/assets/image/image-2.png",
+          "price": 250.00,
+          "discount": 30.00,
+          "final_price": 220.00,
+          "amount_to_pay": 220.00,
+          "description": "A comfortable upholstered Rocking-chair with a modern design."
+        },
+        {
+          "id": 3,
+          "category": "Rocking chair",
+          "title": "Antique Oak Rocking-chair",
+          "image": "/src/assets/image/image-3.png",
+          "price": 300.00,
+          "discount": 50.00,
+          "final_price": 250.00,
+          "amount_to_pay": 250.00,
+          "description": "An antique oak Rocking-chair, perfect for a vintage look."
+        },
+        {
+          "id": 4,
+          "category": "Rocking chair",
+          "title": "Outdoor Rocking-chair",
+          "image": "/src/assets/image/Image-4.png",
+          "price": 180.00,
+          "discount": 15.00,
+          "final_price": 165.00,
+          "amount_to_pay": 165.00,
+          "description": "A durable outdoor Rocking-chair suitable for patio or garden use."
+        },
+        {
+          "id": 5,
+          "category": "Rocking chair",
+          "title": "Reclining Rocking-chair",
+          "image": "/src/assets/image/image-5.png",
+          "price": 350.00,
+          "discount": 40.00,
+          "final_price": 310.00,
+          "amount_to_pay": 310.00,
+          "description": "A reclining Rocking-chair with extra comfort features."
+        },
+        {
+          "id": 6,
+          "category": "Rocking chair",
+          "title": "Rustic Wooden Rocking-chair",
+          "image": "/src/assets/image/image-6.png",
+          "price": 200.00,
+          "discount": 25.00,
+          "final_price": 175.00,
+          "amount_to_pay": 175.00,
+          "description": "A rustic wooden Rocking-chair with a simple, classic design."
+        }
+      ]
+    },
+   
+    {
+      "category": "Side chair",
+      "data":[
+        {
+          "id": 7,
+          "category": "Side chair",
+          "title": "Minimalist Side chair",
+          "image": "/src/assets/image/image-1.png",
+          "price": 100.00,
+          "discount": 10.00,
+          "final_price": 90.00,
+          "amount_to_pay": 90.00,
+          "description": "A minimalist Side chair for a sleek and modern look."
+        },
+        {
+          "id": 8,
+          "category": "Side chair",
+          "title": "Industrial Metal Side chair",
+          "image": "/src/assets/image/image-2.png",
+          "price": 120.00,
+          "discount": 15.00,
+          "final_price": 105.00,
+          "amount_to_pay": 105.00,
+          "description": "A durable metal Side chair with an industrial aesthetic."
+        },
+        {
+          "id": 9,
+          "category": "Side chair",
+          "title": "Wooden Farmhouse Side chair",
+          "image": "/src/assets/image/image-3.png",
+          "price": 140.00,
+          "discount": 20.00,
+          "final_price": 120.00,
+          "amount_to_pay": 120.00,
+          "description": "A farmhouse-style wooden Side chair perfect for a rustic setting."
+        },
+        {
+          "id": 10,
+          "category": "Side chair",
+          "title": "Velvet Padded Side chair",
+          "image": "/src/assets/image/image-4.png",
+          "price": 180.00,
+          "discount": 25.00,
+          "final_price": 155.00,
+          "amount_to_pay": 155.00,
+          "description": "A soft velvet-padded Side chair for extra comfort and style."
+        },
+        {
+          "id": 11,
+          "category": "Side chair",
+          "title": "Vintage Metal Side chair",
+          "image": "/src/assets/image/image-5.png",
+          "price": 110.00,
+          "discount": 10.00,
+          "final_price": 100.00,
+          "amount_to_pay": 100.00,
+          "description": "A vintage-style metal Side chair with a timeless design."
+        },
+        {
+          "id": 12,
+          "category": "Side chair",
+          "title": "Leather Side chair",
+          "image": "/src/assets/image/image-6.png",
+          "price": 220.00,
+          "discount": 30.00,
+          "final_price": 190.00,
+          "amount_to_pay": 190.00,
+          "description": "A luxurious leather Side chair with a contemporary design."
+        }
+      ]
+    },
+
+    {
+      "category": "Lounge Chair",
+      "data":[
+        {
+          "id": 13,
+          "category": "Lounge Chair",
+          "title": "Reclining Lounge Chair",
+          "image": "/src/assets/image/image-2.png",
+          "price": 300.00,
+          "discount": 40.00,
+          "final_price": 260.00,
+          "amount_to_pay": 260.00,
+          "description": "A comfortable reclining lounge chair perfect for relaxation."
+        },
+        {
+          "id": 14,
+          "category": "Lounge Chair",
+          "title": "Modern Fabric Lounge Chair",
+          "image": "/src/assets/image/image-3.png",
+          "price": 250.00,
+          "discount": 30.00,
+          "final_price": 220.00,
+          "amount_to_pay": 220.00,
+          "description": "A modern fabric lounge chair with a sleek design."
+        },
+        {
+          "id": 15,
+          "category": "Lounge Chair",
+          "title": "Leather Recliner Lounge Chair",
+          "image": "/src/assets/image/image-4.png",
+          "price": 400.00,
+          "discount": 50.00,
+          "final_price": 350.00,
+          "amount_to_pay": 350.00,
+          "description": "A luxurious leather recliner lounge chair for ultimate comfort."
+        },
+        {
+          "id": 16,
+          "category": "Lounge Chair",
+          "title": "Mid-Century Lounge Chair",
+          "image": "/src/assets/image/image-5.png",
+          "price": 280.00,
+          "discount": 35.00,
+          "final_price": 245.00,
+          "amount_to_pay": 245.00,
+          "description": "A mid-century modern lounge chair with a stylish design."
+        },
+        {
+          "id": 17,
+          "category": "Lounge Chair",
+          "title": "Outdoor Wicker Lounge Chair",
+          "image": "/src/assets/image/image-6.png",
+          "price": 220.00,
+          "discount": 20.00,
+          "final_price": 200.00,
+          "amount_to_pay": 200.00,
+          "description": "A durable outdoor wicker lounge chair for outdoor relaxation."
+        },
+        {
+          "id": 18,
+          "category": "Lounge Chair",
+          "title": "Contemporary Lounge Chair",
+          "image": "/src/assets/image/image-1.png",
+          "price": 350.00,
+          "discount": 40.00,
+          "final_price": 310.00,
+          "amount_to_pay": 310.00,
+          "description": "A contemporary lounge chair with a bold design for modern spaces."
+        }
+      ]
+    }
+   
+   
+
+  ]
+  
