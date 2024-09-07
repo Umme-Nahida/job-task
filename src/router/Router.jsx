@@ -10,6 +10,7 @@ import Custom from "../Pages/Custom/Custom";
 import Blog from "../Pages/Blog/Blog";
 import Signup from "../Components/Signup/Signup";
 import Login from "../Components/Login/Login";
+import Order from "../Pages/Order/Order";
 
 const router = createBrowserRouter([
     {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
         {
             path:'/product',
             element:<Product></Product>
+        },
+        {
+            path:'/order',
+            element:<Order></Order>
         },
     
         {
